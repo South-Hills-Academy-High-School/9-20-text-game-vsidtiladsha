@@ -481,6 +481,14 @@ if (game.ask("Drink the iced tea ", "Walk 10 miles")) {
         `, SpriteKind.Player)
     game.showLongText("The dinosaur says : Give me something", DialogLayout.Bottom)
     if (game.ask("Give the dinosaur 2$", "Give the dinosaur iced tea")) {
-    	
+        gameover("The dinosaur eats you")
+    } else {
+        game.showLongText("run away from dinosaur", DialogLayout.Bottom)
+        if (true) {
+            game.showLongText("got away from dinosaur", DialogLayout.Bottom)
+            game.over(true)
+        } else {
+            gameover("overrrr L")
+        }
     }
 }
